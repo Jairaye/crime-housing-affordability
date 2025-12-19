@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Data (keep raw downloads out of git by default)
+data/raw/**
+data/interim/**
+
+# Outputs
+outputs/**
