@@ -32,8 +32,8 @@ Where $100K fails, required incomes typically range from **$110K to $120K**, wit
 
 ### Geography
 
-- Analysis is conducted at the metropolitan area level.
-- This avoids distortions from tiny towns or hyper local neighborhoods while reflecting real housing markets.
+- Analysis is conducted at the metropolitan area level
+- This avoids distortions from tiny towns or hyper local neighborhoods while reflecting real housing markets
 
 ### Housing Data
 
@@ -92,7 +92,7 @@ The majority of U.S. metros fall into the Comfortable or Stretched categories fo
 
 ### 2. Renting is more broadly accessible than buying
 
-Renting is viable in more metros than buying. Ownership presents a higher fixed cost barrier even when long term affordability may be reasonable. This aligns with current market conditions rather than modeling artifacts.
+Renting is viable in more metros than buying. Ownership presents a higher fixed cost barrier even when long term affordability may be reasonable.
 
 ### 3. Where $100K fails, it fails predictably
 
@@ -123,8 +123,21 @@ State tax impacts could be incorporated later as a sensitivity analysis without 
 
 ## How to Reproduce the Analysis
 
-1. Clone the repository
-2. Install Python 3.10 or later
+1. Clone the repository  
+2. Install Python 3.10 or later  
 3. Install dependencies:
-   ```bash
-   pip install pandas numpy
+
+```bash
+pip install pandas numpy
+
+Run the notebooks in this order:
+
+00_setup_and_sanity_checks.ipynb
+01_clean_zillow.ipynb
+02_population_clean.ipynb
+03_merge_and_metrics.ipynb
+
+Outputs will be written to data/processed and outputs.
+
+All assumptions are defined explicitly in config/financial_assumptions.py.
+
