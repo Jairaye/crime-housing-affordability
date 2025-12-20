@@ -1,138 +1,145 @@
-Can a Single Person Live Comfortably on $100K Across U.S. Metros?
-Project Overview
+# Can a Single Person Live Comfortably on $100K Across U.S. Metros?
 
-This project evaluates whether a single individual earning $100,000 gross annually can live comfortably across U.S. metropolitan areas. The analysis accounts for housing costs, federal and payroll taxes, non-housing expenses, and a savings target, using recent Zillow housing data and Census population data.
+## Project Overview
 
-Rather than relying on anecdotes or city-level stereotypes, the goal is to quantify where $100K works, where it requires tradeoffs, and where it genuinely falls short.
+This project evaluates whether a single individual earning $100,000 gross annually can live comfortably across U.S. metropolitan areas. The analysis accounts for housing costs, federal and payroll taxes, non housing expenses, and a savings target using recent Zillow housing data and U.S. Census metropolitan population data.
 
-Core Question
+Rather than relying on anecdotes or city level stereotypes, the goal is to quantify where $100K works, where it requires tradeoffs, and where it genuinely falls short.
 
-Is $100,000 enough to support a comfortable, adult lifestyle for a single person in most U.S. metros, or only in a shrinking minority of places?
+---
 
-Methodology Summary
-Geography
+## Core Question
 
-Analysis is conducted at the metropolitan area level.
+**Is $100,000 enough to support a comfortable adult lifestyle for a single person in most U.S. metros, or only in a shrinking minority of places?**
 
-This avoids distortions from tiny towns or hyper-local neighborhoods while reflecting real housing markets.
+---
 
-Housing Data
+## Methodology Summary
 
-Home values (ZHVI) and rent estimates (ZORI) from Zillow
+### Geography
 
-Most recent available month used consistently across datasets
+- Analysis is conducted at the metropolitan area level.
+- This avoids distortions from tiny towns or hyper local neighborhoods while reflecting real housing markets.
 
-Income and Taxes
+### Housing Data
 
-Gross income: $100,000 annually
+- Zillow Home Value Index (ZHVI)
+- Zillow Observed Rent Index (ZORI)
+- Most recent available month used consistently across datasets
+- Extreme high and low tiers filtered to reflect typical market conditions
 
-Federal income tax modeled using an effective rate
+### Income and Taxes
 
-Payroll taxes (Social Security and Medicare) included
+- Gross income modeled at $100,000 annually
+- Federal income tax modeled using an effective rate
+- Payroll taxes (Social Security and Medicare) included
+- State income taxes intentionally excluded from the baseline to isolate housing market effects
 
-State income taxes intentionally excluded from the baseline to isolate housing market effects
-
-Non-Housing Costs
+### Non Housing Costs
 
 A fixed monthly allowance is assumed for:
-
-transportation, including a reasonable car payment and insurance
-
-food
-
-utilities
-
-healthcare
-
-discretionary spending
+- Transportation, including a reasonable car payment and insurance
+- Food
+- Utilities
+- Healthcare
+- Discretionary spending
 
 A monthly savings target is included to distinguish living from merely surviving.
 
-Affordability Definitions
+---
 
-Housing affordability is evaluated using standard gross-income ratios, consistent with industry norms for rent screening and mortgage underwriting.
+## Affordability Definitions
 
-Status Bands
+Housing affordability is evaluated using standard gross income ratios, consistent with industry norms for rent screening and mortgage underwriting.
 
-Comfortable
-Housing costs at or below 30 percent of gross income and positive monthly cash flow after taxes, expenses, and savings
+### Status Bands
 
-Stretched
-Housing costs between 30 and 40 percent of gross income with limited but non-negative cash flow
+**Comfortable**
+- Housing costs at or below 30 percent of gross income
+- Positive monthly cash flow after taxes, expenses, and savings
 
-Not Viable
-Housing costs above 40 percent of gross income or negative monthly cash flow even if ratios technically pass
+**Stretched**
+- Housing costs between 30 and 40 percent of gross income
+- Limited but non negative monthly cash flow
+
+**Not Viable**
+- Housing costs above 40 percent of gross income
+- Or negative monthly cash flow even if ratios technically pass
 
 In addition to classification, the model calculates the required annual income needed to break even in each metro.
 
-Key Findings
-1. Most metros are viable on $100K
+---
 
-The majority of U.S. metros fall into the Comfortable or Stretched categories for both renting and buying.
+## Key Findings
 
-This suggests that under realistic assumptions, $100K remains a workable income in most housing markets, though not always with large margins.
+### 1. Most metros are viable on $100K
 
-2. Renting is more broadly accessible than buying
+The majority of U.S. metros fall into the Comfortable or Stretched categories for both renting and buying. Under realistic assumptions, $100K remains a workable income in most housing markets, though not always with large margins.
 
-Renting is viable in more metros than buying. Ownership presents a higher fixed-cost barrier even when long-term affordability may be reasonable.
+### 2. Renting is more broadly accessible than buying
 
-This aligns with current market conditions rather than modeling artifacts.
+Renting is viable in more metros than buying. Ownership presents a higher fixed cost barrier even when long term affordability may be reasonable. This aligns with current market conditions rather than modeling artifacts.
 
-3. Where $100K fails, it fails predictably
+### 3. Where $100K fails, it fails predictably
 
-Metros where $100K is Not Viable represent a relatively small subset. These metros are heavily concentrated in well-known high-cost regions and often require incomes meaningfully above $100K.
+Metros where $100K is Not Viable represent a relatively small subset. These metros are heavily concentrated in well known high cost regions and often require incomes meaningfully above $100K.
 
-The issue is not widespread unaffordability but extreme outliers with unusually high housing costs.
+The issue is not widespread unaffordability, but extreme outliers with unusually high housing costs.
 
-4. Not viable does not always mean dramatically unaffordable
+### 4. Not viable does not always mean dramatically unaffordable
 
 Many metros classified as Not Viable are only modestly above the $100K threshold, often requiring $110K to $120K. A much smaller number require dramatically higher incomes, such as $160K or more.
 
 This distinction is frequently lost in public discussion.
 
-Notable Exceptions
+---
 
-The most unaffordable metros are overwhelmingly concentrated in major coastal markets, dense financial or technology hubs, and regions with long-standing housing supply constraints.
+## Notable Exceptions
+
+The most unaffordable metros are overwhelmingly concentrated in major coastal markets, dense financial or technology hubs, and regions with long standing housing supply constraints.
 
 These results align closely with common expectations rather than revealing surprising new problem areas.
 
-Why State Taxes Are Not Included
+---
+
+## Why State Taxes Are Not Included
 
 State income taxes vary widely and introduce policy effects that are secondary to housing costs. To keep the baseline focused and comparable across metros, state taxes are excluded in the core model.
 
 State tax impacts could be incorporated later as a sensitivity analysis without changing the core conclusions.
 
-Limitations
+---
 
-Results apply to a single-person household only.
+## Limitations
 
-Family size, childcare costs, student loans, and medical variability are not modeled.
+- Results apply to a single person household only
+- Family size, childcare costs, student loans, and medical variability are not modeled
+- Metro level averages mask neighborhood level variation
+- Housing markets change, and results represent a recent snapshot rather than a forecast
 
-Metro-level averages mask neighborhood-level variation.
+---
 
-Housing markets change, and results represent a recent snapshot rather than a forecast.
+## Data Sources
 
-Data Sources
+- Zillow Home Value Index (ZHVI)
+- Zillow Observed Rent Index (ZORI)
+- U.S. Census Bureau metropolitan population estimates
 
-Zillow Home Value Index (ZHVI)
+---
 
-Zillow Observed Rent Index (ZORI)
+## Repository Structure
 
-U.S. Census Bureau metropolitan population estimates
+- `data/raw` contains original source files
+- `data/processed` contains cleaned, analysis ready datasets
+- `notebooks` contain step by step reproducible analysis
+- `outputs` contain summary tables for reporting
 
-Repository Structure
+---
 
-data/raw contains original source files
+## Summary
 
-data/processed contains cleaned, analysis-ready datasets
+This analysis suggests that $100,000 is neither universally sufficient nor broadly inadequate. It remains enough to support a stable adult lifestyle in most U.S. metros, but fails in a small, predictable set of high cost markets where required incomes are meaningfully higher.
 
-notebooks contain step-by-step reproducible analysis
-
-outputs contain summary tables for reporting
-
-Summary
-
-This analysis suggests that $100,000 is neither universally sufficient nor broadly inadequate. It remains enough to support a stable, adult lifestyle in most U.S. metros but fails in a small, predictable set of high-cost markets where required incomes are meaningfully higher.
 
 Possible Extensions
 
