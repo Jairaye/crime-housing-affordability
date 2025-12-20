@@ -128,9 +128,3 @@ State tax impacts could be incorporated later as a sensitivity analysis without 
 3. Install dependencies:
    ```bash
    pip install pandas numpy
-
-
-Possible Extensions
-
-Future iterations could explore state tax sensitivity, ZIP-level analysis, or additional cost-of-living factors.
-
