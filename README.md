@@ -14,6 +14,20 @@ Rather than relying on anecdotes or city level stereotypes, the goal is to quant
 
 ---
 
+## High Level Results
+
+The analysis covers **546 U.S. metropolitan areas**.
+
+| Category | Renting | Buying |
+|--------|--------|--------|
+| Comfortable | Majority of metros | Strong majority |
+| Stretched | Minority | Moderate share |
+| Not Viable | Small subset | Small but larger subset |
+
+Where $100K fails, required incomes typically range from **$110K to $120K**, with only a small number of metros requiring dramatically higher incomes.
+
+---
+
 ## Methodology Summary
 
 ### Geography
@@ -84,21 +98,9 @@ Renting is viable in more metros than buying. Ownership presents a higher fixed 
 
 Metros where $100K is Not Viable represent a relatively small subset. These metros are heavily concentrated in well known high cost regions and often require incomes meaningfully above $100K.
 
-The issue is not widespread unaffordability, but extreme outliers with unusually high housing costs.
-
 ### 4. Not viable does not always mean dramatically unaffordable
 
 Many metros classified as Not Viable are only modestly above the $100K threshold, often requiring $110K to $120K. A much smaller number require dramatically higher incomes, such as $160K or more.
-
-This distinction is frequently lost in public discussion.
-
----
-
-## Notable Exceptions
-
-The most unaffordable metros are overwhelmingly concentrated in major coastal markets, dense financial or technology hubs, and regions with long standing housing supply constraints.
-
-These results align closely with common expectations rather than revealing surprising new problem areas.
 
 ---
 
@@ -119,26 +121,13 @@ State tax impacts could be incorporated later as a sensitivity analysis without 
 
 ---
 
-## Data Sources
+## How to Reproduce the Analysis
 
-- Zillow Home Value Index (ZHVI)
-- Zillow Observed Rent Index (ZORI)
-- U.S. Census Bureau metropolitan population estimates
-
----
-
-## Repository Structure
-
-- `data/raw` contains original source files
-- `data/processed` contains cleaned, analysis ready datasets
-- `notebooks` contain step by step reproducible analysis
-- `outputs` contain summary tables for reporting
-
----
-
-## Summary
-
-This analysis suggests that $100,000 is neither universally sufficient nor broadly inadequate. It remains enough to support a stable adult lifestyle in most U.S. metros, but fails in a small, predictable set of high cost markets where required incomes are meaningfully higher.
+1. Clone the repository
+2. Install Python 3.10 or later
+3. Install dependencies:
+   ```bash
+   pip install pandas numpy
 
 
 Possible Extensions
